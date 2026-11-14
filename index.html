@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panda Plush Co. | Panda Plushies &amp; Soft Toys</title>
+<meta name="description" content="Shop panda plushies: classic pandas, giant pandas, red pandas, minis, pillows and gift sets.">
+<style>
+  :root {
+    --gb: #2f8a4f;      /* bamboo green (primary) */
+    --gn: #1d3b2a;      /* deep forest (dark) */
+    --gg: #6d6e71;      /* muted grey */
+    --line: #dfe3e8;
+    --soft: #f4f7f4;
+    --ok: #1e7d32;
+    --ink: #1f2933;
+    --tint: #eaf5ee;
+    --tint-line: #cfe6d7;
+    --yellow: #ffd23f;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #fff; color: var(--ink); }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; }
+
+  /* ---------- Top: strip, header, department bar ---------- */
+  .gn-strip { background: var(--tint); font-size: 12px; color: var(--gn); text-align: center; padding: 5px 12px; }
+  .gn-top { position: sticky; top: 0; z-index: 900; background: #fff; box-shadow: 0 1px 0 var(--line); }
+  .gn-head { display: flex; align-items: center; gap: 20px; max-width: 1440px; margin: 0 auto; padding: 10px 20px; }
+  .gn-logo { display: flex; align-items: center; gap: 10px; flex: none; }
+  .gn-logo svg { width: 44px; height: 44px; display: block; }
+  .gn-logo .wm { line-height: 1.05; }
+  .gn-logo .wm b { display: block; font-size: 19px; color: var(--gn); letter-spacing: -.01em; }
+  .gn-logo .wm small { font-size: 11px; color: var(--gg); letter-spacing: .04em; text-transform: uppercase; }
+  .gn-search { flex: 1; display: flex; position: relative; border: 2px solid var(--gb); border-radius: 8px; height: 46px; background: #fff; min-width: 0; }
+  .gn-search select { border: 0; background: var(--soft); border-right: 1px solid var(--line); padding: 0 10px; font-size: 13px; color: #333; max-width: 190px; border-radius: 6px 0 0 6px; }
+  .gn-search input { flex: 1; border: 0; padding: 0 14px; font-size: 16px; outline: none; min-width: 0; }
+  .gn-search button { border: 0; background: var(--gb); color: #fff; padding: 0 22px; font-weight: 600; font-size: 15px; cursor: pointer; border-radius: 0 5px 5px 0; }
+  .gn-search button:hover { background: var(--gn); }
+  .gn-ac { position: absolute; left: -2px; right: -2px; top: 100%; margin-top: 4px; background: #fff; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 30px rgba(0,0,0,.15); display: none; z-index: 950; max-height: 70vh; overflow: auto; padding-bottom: 6px; }
+  .gn-ac.on { display: block; }
+  .gn-ac h6 { margin: 0; padding: 10px 14px 4px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--gg); }
+  .gn-ac a { display: flex; align-items: center; gap: 10px; padding: 7px 14px; font-size: 14px; cursor: pointer; }
+  .gn-ac a:hover, .gn-ac a.hl { background: var(--tint); }
+  .gn-ac img { width: 36px; height: 36px; object-fit: contain; flex: none; }
+  .gn-ac small { color: var(--gg); }
+  .gn-util { display: flex; align-items: center; gap: 18px; font-size: 13px; white-space: nowrap; }
+  .gn-util .ph b { display: block; font-size: 15px; color: var(--gn); }
+  .gn-cart { position: relative; display: flex; align-items: center; gap: 8px; background: var(--gn); color: #fff !important; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; border: 0; font-size: 14px; }
+  .gn-cart i { font-style: normal; background: var(--yellow); color: #1f2933; border-radius: 20px; padding: 1px 8px; font-size: 12px; }
+  .gn-bar { background: var(--gb); color: #fff; position: relative; }
+  .gn-bar .in { display: flex; align-items: center; max-width: 1440px; margin: 0 auto; padding: 0 12px; height: 42px; overflow-x: auto; scrollbar-width: none; }
+  .gn-bar .in::-webkit-scrollbar { display: none; }
+  .gn-bar a, .gn-bar button { color: #fff; font-size: 14px; padding: 0 12px; height: 42px; display: flex; align-items: center; white-space: nowrap; background: none; border: 0; cursor: pointer; font-weight: 500; }
+  .gn-bar a:hover, .gn-bar button:hover { background: rgba(255,255,255,.14); }
+  .gn-bar .all { font-weight: 700; background: var(--gn); gap: 8px; }
+  .gn-mega { position: absolute; left: 0; right: 0; top: 100%; background: #fff; box-shadow: 0 18px 40px rgba(0,0,0,.18); display: none; z-index: 940; border-top: 1px solid var(--line); color: #1f2933; }
+  .gn-mega.on { display: flex; }
+  .gn-mega .l { width: 270px; border-right: 1px solid var(--line); padding: 8px 0; max-height: 72vh; overflow: auto; flex: none; }
+  .gn-mega .l a { display: flex; justify-content: space-between; padding: 9px 18px; font-size: 14px; cursor: pointer; color: #1f2933; }
+  .gn-mega .l a.on { background: var(--tint); color: var(--gb); font-weight: 600; }
+  .gn-mega .r { flex: 1; padding: 18px 26px; max-height: 72vh; overflow: auto; }
+  .gn-mega .r .cats { columns: 2 220px; column-gap: 28px; }
+  .gn-mega .r .cats a { display: flex; align-items: center; gap: 12px; padding: 6px 0; font-size: 14px; color: #3d4852; break-inside: avoid; }
+  .gn-mega .r .cats a img { width: 48px; height: 48px; flex: none; }
+  .gn-mega .r .cats a:hover { color: var(--gb); text-decoration: underline; }
+  .gn-mega .r .shopall { display: inline-block; font-size: 14px; color: var(--gb) !important; font-weight: 700; margin-bottom: 12px; }
+
+  /* ---------- Main ---------- */
+  .gn-main { max-width: 1440px; margin: 0 auto; padding: 16px 20px 60px; min-height: 70vh; }
+  .gn-crumb { font-size: 13px; color: var(--gg); margin-bottom: 10px; }
+  .gn-crumb a { color: var(--gb) !important; }
+  .gn-crumb a:hover { text-decoration: underline; }
+  .gn-crumb span { margin: 0 6px; }
+
+  /* Home */
+  .gn-hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 18px; margin-bottom: 8px; }
+  .gn-hero .a { background: linear-gradient(120deg, var(--gb) 0%, var(--gn) 100%); color: #fff; border-radius: 12px; padding: 30px 32px; position: relative; overflow: hidden; min-height: 230px; }
+  .gn-hero .a h1 { margin: 0 0 10px; font-size: 30px; line-height: 1.15; max-width: 520px; position: relative; }
+  .gn-hero .a p { margin: 0 0 18px; font-size: 15px; opacity: .92; max-width: 470px; position: relative; }
+  .gn-hero .a .cta { display: inline-block; background: #fff; color: var(--gn) !important; font-weight: 700; padding: 11px 20px; border-radius: 8px; margin-right: 10px; cursor: pointer; position: relative; }
+  .gn-hero .a .cta.alt { background: rgba(255,255,255,.14); color: #fff !important; border: 1px solid rgba(255,255,255,.4); }
+  .gn-hero .a .art { position: absolute; right: -10px; bottom: -14px; width: 230px; height: 230px; opacity: .97; }
+  .gn-hero .b { border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; background: var(--soft); font-size: 14px; }
+  .gn-hero .b h3 { margin: 0 0 10px; color: var(--gn); font-size: 16px; }
+  .gn-hero .b ol { margin: 0; padding-left: 20px; }
+  .gn-hero .b li { margin-bottom: 8px; line-height: 1.45; }
+  .gn-sec { margin: 26px 0; }
+  .gn-sec h2 { font-size: 21px; color: var(--gn); margin: 0 0 14px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .gn-sec h2 a { font-size: 14px; color: var(--gb) !important; font-weight: 600; }
+  .gn-depts { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+  .gn-dept { border: 1px solid var(--line); border-radius: 10px; padding: 14px 10px; text-align: center; cursor: pointer; background: #fff; transition: box-shadow .15s, border-color .15s; }
+  .gn-dept:hover { border-color: var(--gb); box-shadow: 0 4px 14px rgba(47,138,79,.15); }
+  .gn-dept img { width: 96px; height: 96px; object-fit: contain; display: block; margin: 0 auto 8px; }
+  .gn-dept b { display: block; font-size: 14px; color: var(--gn); }
+  .gn-dept small { color: var(--gg); font-size: 12px; }
+  .gn-row { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 8px; }
+  .gn-row .gn-card { flex: none; width: 200px; }
+  .gn-brands { display: flex; flex-wrap: wrap; gap: 8px; }
+  .gn-brands a { border: 1px solid var(--line); border-radius: 6px; padding: 8px 14px; font-size: 13px; font-weight: 600; color: var(--gn) !important; cursor: pointer; background: #fff; }
+  .gn-brands a:hover { border-color: var(--gb); }
+
+  /* Browse */
+  .gn-browse { display: grid; grid-template-columns: 260px 1fr; gap: 26px; }
+  .gn-side { font-size: 14px; }
+  .gn-side .fb { border-bottom: 1px solid var(--line); padding: 12px 0; }
+  .gn-side .fb:first-child { padding-top: 0; }
+  .gn-side h4 { margin: 0 0 8px; font-size: 14px; color: var(--gn); display: flex; justify-content: space-between; }
+  .gn-side .tree a { display: flex; justify-content: space-between; padding: 4px 0; color: #2b3640; cursor: pointer; }
+  .gn-side .tree a:hover { color: var(--gb); }
+  .gn-side .tree a.up { color: var(--gb); font-weight: 600; }
+  .gn-side .tree a.cur { font-weight: 700; color: var(--gn); }
+  .gn-side small { color: var(--gg); font-size: 12px; }
+  .gn-side label { display: flex; align-items: center; gap: 8px; padding: 3px 0; cursor: pointer; }
+  .gn-side label span { flex: 1; }
+  .gn-side .sw { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(0,0,0,.15); flex: none; }
+  .gn-side .side-head { display: none; }
+  .gn-head2 { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 10px; }
+  .gn-head2 h1 { margin: 0; font-size: 24px; color: var(--gn); }
+  .gn-head2 .cnt { color: var(--gg); font-size: 14px; margin-top: 4px; }
+  .gn-tools { display: flex; gap: 10px; align-items: center; font-size: 14px; flex-wrap: wrap; }
+  .gn-tools select { padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; font-size: 14px; background: #fff; }
+  .gn-tools .vt { display: flex; }
+  .gn-tools .vt button { border: 1px solid var(--line); background: #fff; padding: 7px 10px; cursor: pointer; font-size: 13px; }
+  .gn-tools .vt button:first-child { border-radius: 6px 0 0 6px; }
+  .gn-tools .vt button:last-child { border-radius: 0 6px 6px 0; border-left: 0; }
+  .gn-tools .vt button.on { background: var(--gn); color: #fff; border-color: var(--gn); }
+  .gn-tools .fbtn { display: none; border: 1px solid var(--gn); background: #fff; color: var(--gn); padding: 8px 14px; border-radius: 6px; font-weight: 600; cursor: pointer; }
+  .gn-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+  .gn-chips a { background: var(--tint); color: var(--gn) !important; border: 1px solid var(--tint-line); border-radius: 20px; padding: 4px 12px; font-size: 13px; cursor: pointer; }
+  .gn-chips a.clr { background: none; border: 0; color: var(--gb) !important; text-decoration: underline; }
+  .gn-subcats { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 14px; }
+  .gn-subcats a { flex: none; width: 132px; border: 1px solid var(--line); border-radius: 8px; padding: 10px; text-align: center; font-size: 12.5px; cursor: pointer; background: #fff; }
+  .gn-subcats a:hover { border-color: var(--gb); box-shadow: 0 2px 8px rgba(47,138,79,.15); }
+  .gn-subcats img { width: 72px; height: 72px; object-fit: contain; display: block; margin: 0 auto 6px; }
+
+  /* Cards */
+  .gn-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+  .gn-card { border: 1px solid var(--line); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; background: #fff; cursor: pointer; transition: box-shadow .15s, border-color .15s; }
+  .gn-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,.1); border-color: #c9d3de; }
+  .gn-card .im { height: 160px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; position: relative; }
+  .gn-card .im img { max-width: 100%; max-height: 160px; object-fit: contain; }
+  .gn-card .tag { position: absolute; top: 0; left: 0; background: #c0392b; color: #fff; font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 4px; }
+  .gn-card .br { font-size: 12px; color: var(--gg); text-transform: uppercase; letter-spacing: .03em; }
+  .gn-card .tt { font-size: 14px; line-height: 1.35; margin: 3px 0 6px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; min-height: 57px; }
+  .gn-card .sk { font-size: 12px; color: var(--gg); }
+  .gn-card .pr { margin-top: auto; padding-top: 8px; }
+  .gn-pr b { font-size: 20px; color: #111; }
+  .gn-pr s { color: var(--gg); font-size: 13px; margin-left: 6px; }
+  .gn-pr em { font-style: normal; font-size: 12px; color: var(--gg); margin-left: 4px; }
+  .gn-av { font-size: 12.5px; margin: 4px 0 8px; }
+  .gn-av.ok { color: var(--ok); }
+  .gn-av.no { color: #8a5a00; }
+  .gn-add { border: 0; background: var(--gb); color: #fff; font-weight: 600; border-radius: 6px; padding: 9px; cursor: pointer; font-size: 14px; width: 100%; }
+  .gn-add:hover { background: var(--gn); }
+  .gn-list { grid-template-columns: 1fr; }
+  .gn-list .gn-card { flex-direction: row; gap: 16px; align-items: flex-start; }
+  .gn-list .gn-card .im { width: 150px; height: 130px; flex: none; margin: 0; }
+  .gn-list .gn-card .im img { max-height: 130px; }
+  .gn-list .gn-card .bd { flex: 1; min-width: 0; }
+  .gn-list .gn-card .pr { width: 200px; flex: none; margin: 0; padding: 0; }
+  .gn-list .gn-card .tt { min-height: 0; }
+  .gn-pages { display: flex; justify-content: center; gap: 6px; margin: 28px 0 0; flex-wrap: wrap; }
+  .gn-pages a { border: 1px solid var(--line); border-radius: 6px; padding: 7px 12px; cursor: pointer; font-size: 14px; background: #fff; }
+  .gn-pages a.on { background: var(--gn); color: #fff !important; border-color: var(--gn); }
+  .gn-pages a.dis { opacity: .4; pointer-events: none; }
+  .gn-empty { padding: 50px 20px; text-align: center; color: var(--gg); }
+  .gn-empty h3 { color: var(--ink); }
+
+  /* Product page */
+  .gn-pdp { display: grid; grid-template-columns: minmax(280px,1fr) minmax(300px,1fr) 300px; gap: 30px; align-items: start; }
+  .gn-pdp .pim { border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 380px; background: #fff; }
+  .gn-pdp .pim img { width: 100%; max-width: 420px; max-height: 440px; object-fit: contain; }
+  .gn-pdp h1 { font-size: 22px; line-height: 1.3; margin: 4px 0 8px; color: #111; }
+  .gn-pdp .meta { font-size: 13px; color: var(--gg); margin-bottom: 14px; }
+  .gn-pdp .meta a { color: var(--gb) !important; font-weight: 600; }
+  .gn-pdp ul { padding-left: 18px; font-size: 14px; line-height: 1.5; }
+  .gn-pdp .desc { font-size: 14px; line-height: 1.6; color: #33403a; }
+  .gn-pdp h3 { font-size: 16px; color: var(--gn); margin: 22px 0 8px; }
+  .gn-buy { border: 1px solid var(--line); border-radius: 10px; padding: 18px; position: sticky; top: 140px; background: #fff; }
+  .gn-buy .gn-pr b { font-size: 28px; }
+  .gn-buy .qty { display: flex; align-items: center; gap: 8px; margin: 12px 0; font-size: 14px; }
+  .gn-buy .qty input { width: 70px; padding: 8px; border: 1px solid var(--line); border-radius: 6px; font-size: 15px; text-align: center; }
+  .gn-buy .gn-add { padding: 12px; font-size: 15px; margin-bottom: 8px; }
+  .gn-buy .now { background: var(--yellow); color: #1f2933; }
+  .gn-buy .now:hover { background: #f2c200; }
+  .gn-buy .note { font-size: 12.5px; color: var(--gg); margin-top: 10px; line-height: 1.45; }
+  .gn-specs { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .gn-specs td { border-bottom: 1px solid var(--line); padding: 8px 10px; vertical-align: top; }
+  .gn-specs td:first-child { width: 40%; color: var(--gg); background: var(--soft); }
+
+  /* Toast + footer */
+  .gn-toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%) translateY(20px); background: var(--gn); color: #fff; padding: 12px 18px; border-radius: 10px; font-size: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.25); opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; z-index: 1600; max-width: calc(100% - 32px); }
+  .gn-toast.on { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+  .gn-toast a { color: var(--yellow) !important; font-weight: 700; cursor: pointer; margin-left: 10px; }
+  .gn-foot { background: var(--gn); color: #d6e6dc; font-size: 13px; padding: 26px 20px; text-align: center; line-height: 1.7; }
+  .gn-foot a { color: #fff !important; font-weight: 600; }
+  .gn-ham { display: none; border: 0; background: none; font-size: 24px; cursor: pointer; color: var(--gn); padding: 0 4px; }
+  .gn-drawer-bg { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 1500; display: none; }
+  .gn-drawer-bg.on { display: block; }
+
+  /* ---------- Cart drawer (quote panel) ---------- */
+  .btn { border: none; border-radius: 8px; padding: 10px 16px; font-size: 13.5px; font-weight: 600; cursor: pointer; }
+  .btn-primary { background: var(--gb); color: #fff; }
+  .btn-primary:hover { background: var(--gn); }
+  .btn-ghost { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+  .btn-ghost:hover { background: var(--soft); }
+  .close { border: none; background: none; font-size: 24px; cursor: pointer; color: var(--gg); line-height: 1; }
+  .quote-overlay { display: none; position: fixed; inset: 0; background: rgba(20,25,22,0.45); z-index: 2000; }
+  .quote-overlay.open { display: block; }
+  .quote-panel { position: fixed; top: 0; right: 0; bottom: 0; width: min(480px, 100%); background: #fff; box-shadow: -8px 0 24px rgba(0,0,0,0.15); display: flex; flex-direction: column; z-index: 2001; }
+  .quote-panel-head { padding: 18px 22px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; }
+  .quote-panel-head h2 { margin: 0; font-size: 17px; }
+  .quote-panel-body { flex: 1; overflow-y: auto; padding: 18px 22px; }
+  .quote-panel-foot { padding: 16px 22px 20px 22px; border-top: 1px solid var(--line); }
+  .field-group { margin-bottom: 12px; }
+  .field-group label { display: block; font-size: 12px; font-weight: 600; color: var(--gg); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .field-group label .req { color: #a13d3d; }
+  .field-group input, .field-group textarea { width: 100%; padding: 9px 12px; border: 1px solid var(--line); border-radius: 7px; font-size: 14px; font-family: inherit; }
+  .field-group input.bad, .field-group textarea.bad { border-color: #a13d3d; }
+  .ord-row { display: flex; gap: 10px; }
+  .ord-row > .field-group { flex: 1; min-width: 0; }
+  .ord-form { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+  .ord-form h3 { margin: 0 0 10px; font-size: 15px; }
+  .ord-err { color: #a13d3d; font-size: 13px; margin-top: 8px; display: none; }
+  .ord-done { text-align: center; padding: 30px 10px; }
+  .ord-done svg { width: 120px; height: 120px; }
+  .ord-done h3 { margin: 0 0 8px; font-size: 20px; }
+  .ord-done .ref { display: inline-block; margin: 10px 0; padding: 8px 14px; border-radius: 8px; background: var(--tint); color: var(--gb); font-weight: 700; font-size: 18px; letter-spacing: .5px; }
+  .ord-done p { color: var(--gg); font-size: 14px; line-height: 1.5; margin: 6px 0; }
+  .quote-line { display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .quote-line .qline-thumb { width: 44px; height: 44px; object-fit: contain; background: var(--soft); border-radius: 6px; flex-shrink: 0; }
+  .quote-line .qline-info { flex: 1; min-width: 0; }
+  .quote-line .qline-title { font-size: 13px; font-weight: 600; line-height: 1.3; }
+  .quote-line .qline-meta { font-size: 11.5px; color: var(--gg); margin-top: 2px; }
+  .quote-line .qline-qty { width: 52px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; font-size: 13px; text-align: center; }
+  .quote-line .qline-total { width: 76px; text-align: right; font-size: 13.5px; font-weight: 700; color: var(--gn); }
+  .quote-line .qline-remove { border: none; background: none; color: var(--gg); font-size: 18px; cursor: pointer; line-height: 1; padding: 0 2px; }
+  .quote-line .qline-remove:hover { color: #a13d3d; }
+  .quote-empty-msg { color: var(--gg); font-size: 13.5px; padding: 20px 0; text-align: center; }
+  .quote-total-row { display: flex; justify-content: space-between; align-items: baseline; font-size: 16px; font-weight: 700; margin-bottom: 14px; }
+  .quote-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .quote-actions .btn { flex: 1 1 auto; min-width: 100px; }
+  .quote-panel-note { font-size: 12px; color: var(--gg); margin-top: 10px; text-align: center; }
+
+  /* ---------- Print sheet ---------- */
+  #printQuote { display: none; }
+  @media print {
+    body * { visibility: hidden; }
+    #printQuote, #printQuote * { visibility: visible; }
+    #printQuote { display: block; position: absolute; top: 0; left: 0; width: 100%; padding: 24px; }
+    .pq-head { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 3px solid #1d3b2a; padding-bottom: 14px; margin-bottom: 18px; }
+    .pq-head .pq-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: #1d3b2a; }
+    .pq-head .pq-brand svg { width: 44px; height: 44px; }
+    .pq-head .pq-title { text-align: right; }
+    .pq-head .pq-title h1 { margin: 0; font-size: 22px; color: #1d3b2a; }
+    .pq-head .pq-title div { font-size: 12.5px; color: #6d6e71; margin-top: 2px; }
+    .pq-parties { display: flex; gap: 40px; margin-bottom: 20px; font-size: 13px; }
+    .pq-parties > div > div:first-child { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #6d6e71; margin-bottom: 3px; }
+    table.pq-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+    table.pq-table th { text-align: left; border-bottom: 2px solid #1f2933; padding: 8px 6px; }
+    table.pq-table td { border-bottom: 1px solid #e2e6ea; padding: 8px 6px; }
+    table.pq-table .num { text-align: right; }
+    .pq-photo-col { width: 50px; }
+    .pq-thumb { width: 44px; height: 44px; object-fit: contain; display: block; }
+    .pq-total-row td { border-bottom: none; border-top: 2px solid #1f2933; font-weight: 700; font-size: 14px; padding-top: 10px; }
+    .pq-foot { margin-top: 24px; font-size: 11px; color: #6d6e71; }
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1100px) {
+    .gn-pdp { grid-template-columns: 1fr 1fr; }
+    .gn-pdp .gn-buy { grid-column: 1 / -1; position: static; }
+  }
+  @media (max-width: 860px) {
+    .gn-head { flex-wrap: wrap; gap: 10px 14px; padding: 10px 16px; }
+    .gn-ham { display: block; }
+    .gn-logo .wm small { display: none; }
+    .gn-util { margin-left: auto; }
+    .gn-util .ph { display: none; }
+    .gn-search { order: 5; flex-basis: 100%; height: 42px; }
+    .gn-search select { display: none; }
+    .gn-search button { padding: 0 14px; }
+    .gn-main { padding: 14px 16px 50px; }
+    .gn-hero { grid-template-columns: 1fr; }
+    .gn-hero .a { padding: 24px 20px 150px; }
+    .gn-hero .a h1 { font-size: 25px; }
+    .gn-hero .a .art { width: 170px; height: 170px; }
+    .gn-hero .a .cta { margin-bottom: 8px; }
+    .gn-browse { grid-template-columns: 1fr; }
+    .gn-side { position: fixed; top: 0; left: 0; bottom: 0; width: min(320px, 88%); background: #fff; z-index: 1501; overflow: auto; padding: 0 18px 30px; transform: translateX(-105%); transition: transform .2s; }
+    .gn-side.on { transform: none; }
+    .gn-side .side-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; position: sticky; top: 0; background: #fff; border-bottom: 1px solid var(--line); margin-bottom: 12px; font-weight: 700; color: var(--gn); }
+    .gn-side .fb:first-of-type { padding-top: 0; }
+    .gn-tools .fbtn { display: inline-block; }
+    .gn-pdp { grid-template-columns: 1fr; }
+    .gn-pdp .pim { min-height: 0; }
+    .gn-list .gn-card { flex-wrap: wrap; }
+    .gn-list .gn-card .im { width: 110px; height: 110px; }
+    .gn-list .gn-card .pr { width: 100%; }
+    .gn-mega .l { width: 100%; border-right: 0; }
+    .gn-mega .r { display: none; }
+    .gn-depts { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+    .gn-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+    .gn-card .im { height: 130px; }
+    .gn-card .im img { max-height: 130px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="gn-top">
+  <div class="gn-strip">Free shipping on orders over <b>$50</b> &middot; Every panda is hand-checked before it ships</div>
+  <div class="gn-head">
+    <button class="gn-ham" id="gnHam" aria-label="Departments">&#9776;</button>
+    <a class="gn-logo" href="#/" aria-label="Panda Plush Co. home">
+      <span id="logoArt"></span>
+      <span class="wm"><b>Panda Plush Co.</b><small>Soft toys &amp; plushies</small></span>
+    </a>
+    <form class="gn-search" id="gnSearch" autocomplete="off">
+      <select id="gnScope" aria-label="Search in"><option value="">All departments</option></select>
+      <input id="gnQ" type="search" placeholder="Search pandas by name, size, colour or item #…" aria-label="Search">
+      <button type="submit">Search</button>
+      <div class="gn-ac" id="gnAc"></div>
+    </form>
+    <div class="gn-util">
+      <a class="ph" href="tel:8005550142">Questions? Call<b>800-555-0142</b></a>
+      <button class="gn-cart" id="gnCart" type="button">Cart <i id="gnCartN">0</i></button>
+    </div>
+  </div>
+  <nav class="gn-bar">
+    <div class="in" id="gnBarIn">
+      <button class="all" id="gnAll" type="button">&#9776; Shop All Departments</button>
+    </div>
+    <div class="gn-mega" id="gnMega"><div class="l" id="gnMegaL"></div><div class="r" id="gnMegaR"></div></div>
+  </nav>
+</div>
+
+<main class="gn-main" id="gnMain"></main>
+
+<footer class="gn-foot">
+  Panda Plush Co. &middot; Soft toys for every age &middot; Demo storefront, no payment is taken online<br>
+  Questions? Call <a href="tel:8005550142">800-555-0142</a> &middot; <a href="#/">Back to store home</a>
+</footer>
+
+<div class="gn-toast" id="gnToast"></div>
+<div class="gn-drawer-bg" id="gnBg"></div>
+
+<!-- Cart drawer -->
+<div class="quote-overlay" id="quoteOverlay">
+  <div class="quote-panel" role="dialog" aria-label="Your cart">
+    <div class="quote-panel-head">
+      <h2>Your cart (<span id="quoteCount">0</span>)</h2>
+      <button class="close" id="closeQuote" type="button" aria-label="Close">&times;</button>
+    </div>
+    <div class="quote-panel-body" id="quoteBody">
+      <div id="quoteLines"></div>
+      <div class="quote-empty-msg" id="quoteEmptyMsg">Your cart is empty. Add some pandas from the catalog.</div>
+      <div class="ord-form" id="ordForm">
+        <h3>Your details</h3>
+        <div class="field-group"><label for="custName">Name <span class="req">*</span></label><input type="text" id="custName" placeholder="Your name"></div>
+        <div class="ord-row">
+          <div class="field-group"><label for="custEmail">Email <span class="req">*</span></label><input type="email" id="custEmail" placeholder="you@example.com"></div>
+          <div class="field-group"><label for="custPhone">Phone</label><input type="tel" id="custPhone" placeholder="Optional"></div>
+        </div>
+        <div class="field-group"><label for="custAddr">Delivery address <span class="req">*</span></label><textarea id="custAddr" rows="2" placeholder="Street, city, postcode"></textarea></div>
+        <div class="field-group"><label for="custNote">Gift note (optional)</label><input type="text" id="custNote" placeholder="e.g. Happy birthday, Mia!"></div>
+        <div class="ord-err" id="ordErr"></div>
+      </div>
+    </div>
+    <div class="quote-panel-foot" id="quoteFoot">
+      <div class="quote-total-row"><span>Total</span><span id="quoteTotal">$0.00</span></div>
+      <div class="quote-actions">
+        <button class="btn btn-ghost" id="clearQuoteBtn" type="button">Clear</button>
+        <button class="btn btn-ghost" id="emailQuoteBtn" type="button">Email order</button>
+        <button class="btn btn-ghost" id="printQuoteBtn" type="button">Print / Save PDF</button>
+      </div>
+      <button class="btn btn-primary" id="placeOrderBtn" type="button" style="width:100%; margin-top:10px;">Place order request</button>
+      <div class="quote-panel-note">Demo store: nothing is charged. We confirm every order by email.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Print sheet -->
+<div id="printQuote">
+  <div class="pq-head">
+    <div class="pq-brand"><span id="pqLogo"></span>Panda Plush Co.</div>
+    <div class="pq-title"><h1>Order summary</h1><div id="pqDate"></div></div>
+  </div>
+  <div class="pq-parties">
+    <div><div>Customer</div><div id="pqCustomer">—</div></div>
+    <div><div>Deliver to</div><div id="pqAddr">—</div></div>
+    <div id="pqNoteWrap"><div>Gift note</div><div id="pqNote">—</div></div>
+  </div>
+  <table class="pq-table">
+    <thead><tr><th class="pq-photo-col"></th><th>Item</th><th>SKU</th><th class="num">Qty</th><th class="num">Unit price</th><th class="num">Total</th></tr></thead>
+    <tbody id="pqRows"></tbody>
+    <tfoot><tr class="pq-total-row"><td colspan="5">Total</td><td class="num" id="pqGrandTotal"></td></tr></tfoot>
+  </table>
+  <div class="pq-foot">Panda Plush Co. Prices subject to change; not a binding order until confirmed by Panda Plush Co.</div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* =========================================================
+     1. Helpers
+     ========================================================= */
+  var $ = function (s, el) { return (el || document).querySelector(s); };
+  var $$ = function (s, el) { return Array.prototype.slice.call((el || document).querySelectorAll(s)); };
+  function h(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function money(n) { return "$" + Number(n || 0).toFixed(2); }
+  function num(n) { return Number(n).toLocaleString(); }
+  function store(k, v) {
+    try {
+      if (v === undefined) { var raw = localStorage.getItem(k); return raw ? JSON.parse(raw) : null; }
+      localStorage.setItem(k, JSON.stringify(v));
+    } catch (e) { return null; }
+  }
+  function rng(seed) { // mulberry32
+    return function () {
+      seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+      var t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+
+  /* =========================================================
+     2. Panda plush artwork (generated SVG)
+     ========================================================= */
+  var PAL = {
+    classic:  { name: "Black & White", dark: "#2b2b30", light: "#fbfbf7", bg: "#e7f3ea" },
+    pink:     { name: "Blush Pink",    dark: "#d9779a", light: "#fff6f9", bg: "#fdebf1" },
+    mint:     { name: "Mint",          dark: "#4aa886", light: "#f6fffb", bg: "#e1f5ec" },
+    lavender: { name: "Lavender",      dark: "#8a76c9", light: "#fbf8ff", bg: "#eeeafb" },
+    cocoa:    { name: "Cocoa",         dark: "#6b4a3a", light: "#fff8f0", bg: "#f4ebe1" },
+    grey:     { name: "Storm Grey",    dark: "#5d6670", light: "#f7f8fa", bg: "#eaedf2" },
+    red:      { name: "Red Panda",     dark: "#3a2320", fur: "#c9572b", light: "#fff7ef", bg: "#fbeee3", red: true }
+  };
+  var ACC_COLORS = ["#e5484d", "#3b82f6", "#f59e0b", "#8b5cf6", "#ec4899", "#10b981"];
+
+  function headSVG(p, acc, ac) {
+    var s = "";
+    if (p.red) {
+      // ears
+      s += '<circle cx="60" cy="48" r="18" fill="' + p.fur + '"/><circle cx="60" cy="50" r="10" fill="' + p.light + '"/>';
+      s += '<circle cx="140" cy="48" r="18" fill="' + p.fur + '"/><circle cx="140" cy="50" r="10" fill="' + p.light + '"/>';
+      s += '<ellipse cx="100" cy="80" rx="52" ry="44" fill="' + p.fur + '"/>';
+      // face markings
+      s += '<ellipse cx="80" cy="64" rx="9" ry="6" fill="' + p.light + '"/><ellipse cx="120" cy="64" rx="9" ry="6" fill="' + p.light + '"/>';
+      s += '<ellipse cx="100" cy="98" rx="24" ry="18" fill="' + p.light + '"/>';
+      s += '<ellipse cx="60" cy="92" rx="11" ry="14" fill="' + p.light + '"/><ellipse cx="140" cy="92" rx="11" ry="14" fill="' + p.light + '"/>';
+      s += '<path d="M80 86 Q78 100 72 108" stroke="#8a3a1c" stroke-width="5" fill="none" stroke-linecap="round"/>';
+      s += '<path d="M120 86 Q122 100 128 108" stroke="#8a3a1c" stroke-width="5" fill="none" stroke-linecap="round"/>';
+    } else {
+      s += '<circle cx="62" cy="48" r="17" fill="' + p.dark + '"/><circle cx="138" cy="48" r="17" fill="' + p.dark + '"/>';
+      s += '<ellipse cx="100" cy="80" rx="52" ry="44" fill="' + p.light + '" stroke="rgba(0,0,0,.06)" stroke-width="2"/>';
+      s += '<ellipse cx="78" cy="82" rx="13" ry="17" transform="rotate(-30 78 82)" fill="' + p.dark + '"/>';
+      s += '<ellipse cx="122" cy="82" rx="13" ry="17" transform="rotate(30 122 82)" fill="' + p.dark + '"/>';
+    }
+    // eyes
+    s += '<circle cx="80" cy="80" r="6.5" fill="#fff"/><circle cx="80" cy="80.5" r="4.6" fill="#141414"/><circle cx="81.6" cy="78.6" r="1.6" fill="#fff"/>';
+    s += '<circle cx="120" cy="80" r="6.5" fill="#fff"/><circle cx="120" cy="80.5" r="4.6" fill="#141414"/><circle cx="121.6" cy="78.6" r="1.6" fill="#fff"/>';
+    // nose + mouth
+    s += '<ellipse cx="100" cy="95" rx="7" ry="5" fill="' + (p.red ? "#2b1a17" : p.dark) + '"/>';
+    s += '<path d="M93 101 Q100 108 100 101 Q100 108 107 101" stroke="' + (p.red ? "#2b1a17" : p.dark) + '" stroke-width="2.2" fill="none" stroke-linecap="round"/>';
+    // blush
+    s += '<ellipse cx="68" cy="101" rx="8" ry="5" fill="#f59ab2" opacity=".55"/><ellipse cx="132" cy="101" rx="8" ry="5" fill="#f59ab2" opacity=".55"/>';
+    // head accessories
+    if (acc === "bow") {
+      s += '<g transform="translate(64 34) rotate(-18)"><path d="M0 0 L-16 -10 L-16 10 Z" fill="' + ac + '"/><path d="M0 0 L16 -10 L16 10 Z" fill="' + ac + '"/><circle r="5" fill="' + ac + '" stroke="rgba(0,0,0,.15)"/></g>';
+    } else if (acc === "flower") {
+      s += '<g transform="translate(140 38)">';
+      for (var i = 0; i < 5; i++) s += '<circle cx="' + (Math.cos(i * 1.2566) * 8).toFixed(1) + '" cy="' + (Math.sin(i * 1.2566) * 8).toFixed(1) + '" r="6" fill="' + ac + '"/>';
+      s += '<circle r="5" fill="#fde047"/></g>';
+    } else if (acc === "santa") {
+      s += '<path d="M56 50 Q100 26 144 50 L128 8 Q112 -4 100 6 Z" fill="#d93a3a"/>';
+      s += '<rect x="52" y="42" width="96" height="14" rx="7" fill="#fff"/><circle cx="104" cy="6" r="8" fill="#fff"/>';
+    } else if (acc === "party") {
+      s += '<path d="M84 44 L100 2 L116 44 Z" fill="' + ac + '"/><circle cx="96" cy="30" r="3" fill="#fff"/><circle cx="104" cy="18" r="3" fill="#fff"/><circle cx="104" cy="38" r="3" fill="#fde047"/><circle cx="100" cy="2" r="5" fill="#fde047"/>';
+    }
+    return s;
+  }
+
+  function sitSVG(p, acc, ac) {
+    var dk = p.red ? p.dark : p.dark, body = p.red ? p.fur : p.light, s = "";
+    if (p.red) { // striped tail
+      s += '<g transform="rotate(28 160 150)"><ellipse cx="160" cy="150" rx="17" ry="38" fill="' + p.fur + '"/>';
+      s += '<rect x="143" y="128" width="34" height="7" fill="#8a3a1c"/><rect x="143" y="146" width="34" height="7" fill="#8a3a1c"/><rect x="143" y="164" width="34" height="7" fill="#8a3a1c"/></g>';
+    }
+    s += '<ellipse cx="70" cy="166" rx="22" ry="16" fill="' + dk + '"/><ellipse cx="130" cy="166" rx="22" ry="16" fill="' + dk + '"/>';
+    s += '<ellipse cx="70" cy="168" rx="10" ry="8" fill="#f3c6d3" opacity=".75"/><ellipse cx="130" cy="168" rx="10" ry="8" fill="#f3c6d3" opacity=".75"/>';
+    s += '<ellipse cx="100" cy="136" rx="50" ry="42" fill="' + body + '"/>';
+    if (acc === "hoodie") s += '<ellipse cx="100" cy="138" rx="51" ry="41" fill="' + ac + '"/><path d="M80 150 h40" stroke="rgba(255,255,255,.6)" stroke-width="4" stroke-linecap="round"/><rect x="84" y="152" width="32" height="16" rx="5" fill="rgba(0,0,0,.12)"/>';
+    if (!p.red && acc !== "hoodie") s += '<ellipse cx="100" cy="106" rx="50" ry="15" fill="' + dk + '"/>';
+    if (acc === "hoodie") s += '<ellipse cx="100" cy="106" rx="50" ry="15" fill="' + ac + '" stroke="rgba(0,0,0,.1)"/>';
+    s += '<ellipse cx="57" cy="134" rx="14" ry="25" transform="rotate(18 57 134)" fill="' + (acc === "hoodie" ? ac : dk) + '"/>';
+    s += '<ellipse cx="143" cy="134" rx="14" ry="25" transform="rotate(-18 143 134)" fill="' + (acc === "hoodie" ? ac : dk) + '"/>';
+    s += headSVG(p, acc, ac);
+    if (acc === "scarf") {
+      s += '<rect x="58" y="113" width="84" height="15" rx="7.5" fill="' + ac + '"/>';
+      s += '<rect x="118" y="118" width="15" height="32" rx="4" transform="rotate(-12 125 120)" fill="' + ac + '"/>';
+      s += '<path d="M66 120 h70" stroke="rgba(255,255,255,.45)" stroke-width="3" stroke-dasharray="6 6"/>';
+    } else if (acc === "bamboo") {
+      s += '<g transform="rotate(-8 140 130)"><rect x="135" y="84" width="10" height="90" rx="5" fill="#7cb342"/>';
+      s += '<path d="M135 108 h10 M135 132 h10 M135 156 h10" stroke="#4e7d26" stroke-width="2.5"/>';
+      s += '<ellipse cx="156" cy="88" rx="14" ry="5" transform="rotate(-30 156 88)" fill="#8bc34a"/><ellipse cx="126" cy="96" rx="13" ry="4.5" transform="rotate(30 126 96)" fill="#8bc34a"/></g>';
+      s += '<circle cx="141" cy="140" r="11" fill="' + dk + '"/>';
+    } else if (acc === "heart") {
+      s += '<path d="M100 160 C70 140 74 116 90 118 C96 119 100 125 100 128 C100 125 104 119 110 118 C126 116 130 140 100 160 Z" fill="' + ac + '"/>';
+      s += '<circle cx="80" cy="140" r="10" fill="' + dk + '"/><circle cx="120" cy="140" r="10" fill="' + dk + '"/>';
+    } else if (acc === "star") {
+      s += '<path d="M100 116 L106 132 L123 132 L109 142 L114 158 L100 148 L86 158 L91 142 L77 132 L94 132 Z" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>';
+      s += '<circle cx="80" cy="144" r="10" fill="' + dk + '"/><circle cx="120" cy="144" r="10" fill="' + dk + '"/>';
+    } else if (acc === "bottle") {
+      s += '<rect x="92" y="122" width="16" height="34" rx="6" fill="#bfe3ff" stroke="#7fb8e6" stroke-width="2"/><rect x="94" y="114" width="12" height="10" rx="4" fill="' + ac + '"/>';
+      s += '<circle cx="84" cy="142" r="10" fill="' + dk + '"/><circle cx="116" cy="142" r="10" fill="' + dk + '"/>';
+    } else if (acc === "box") {
+      s += '<rect x="74" y="128" width="52" height="38" rx="4" fill="' + ac + '"/><rect x="96" y="128" width="8" height="38" fill="#fde047"/><rect x="70" y="122" width="60" height="12" rx="3" fill="' + ac + '" stroke="rgba(0,0,0,.12)"/>';
+    }
+    return s;
+  }
+
+  function lieSVG(p, acc, ac) {
+    var body = p.red ? p.fur : p.light, dk = p.dark, s = "";
+    s += '<ellipse cx="120" cy="150" rx="66" ry="32" fill="' + body + '"/>';
+    if (!p.red) s += '<ellipse cx="92" cy="150" rx="15" ry="32" fill="' + dk + '"/>';
+    else s += '<g transform="rotate(-12 180 140)"><ellipse cx="184" cy="138" rx="12" ry="30" fill="' + p.fur + '"/><rect x="172" y="124" width="24" height="6" fill="#8a3a1c"/><rect x="172" y="140" width="24" height="6" fill="#8a3a1c"/></g>';
+    s += '<ellipse cx="166" cy="172" rx="22" ry="11" fill="' + dk + '"/>';
+    s += '<ellipse cx="54" cy="174" rx="22" ry="11" fill="' + dk + '"/><ellipse cx="88" cy="176" rx="18" ry="10" fill="' + dk + '"/>';
+    if (acc === "scarf") s += '<rect x="78" y="124" width="22" height="52" rx="8" fill="' + ac + '"/>';
+    s += '<g transform="translate(66 118) scale(.78) translate(-100 -80)">' + headSVG(p, acc, ac) + "</g>";
+    return s;
+  }
+
+  var ART_CACHE = {};
+  function pandaArt(spec) {
+    var key = [spec.pal, spec.acc, spec.form, spec.ac || 0].join("|");
+    if (ART_CACHE[key]) return ART_CACHE[key];
+    var p = PAL[spec.pal] || PAL.classic, acc = spec.acc || "none", ac = ACC_COLORS[spec.ac || 0], f = spec.form || "sit", inner = "";
+    var shadow = '<ellipse cx="100" cy="184" rx="66" ry="8" fill="rgba(0,0,0,.08)"/>';
+    var bg = '<circle cx="100" cy="104" r="90" fill="' + p.bg + '"/>';
+    if (f === "sit") inner = bg + shadow + sitSVG(p, acc, ac);
+    else if (f === "lie") inner = bg + shadow + lieSVG(p, acc, ac);
+    else if (f === "face") {
+      inner = bg + '<rect x="26" y="42" width="148" height="132" rx="40" fill="' + p.light + '" stroke="' + (p.red ? p.fur : p.dark) + '" stroke-width="5" stroke-dasharray="2 7" stroke-linecap="round"/>';
+      inner += '<g transform="translate(100 112) scale(1.12) translate(-100 -80)">' + headSVG(p, acc, ac) + "</g>";
+    } else if (f === "mini") {
+      inner = bg + '<circle cx="100" cy="22" r="12" fill="none" stroke="#b8bcc2" stroke-width="4"/>';
+      inner += '<path d="M100 34 v10" stroke="#b8bcc2" stroke-width="4"/><circle cx="100" cy="48" r="5" fill="none" stroke="#b8bcc2" stroke-width="3"/>';
+      inner += '<g transform="translate(36 50) scale(.66)">' + sitSVG(p, acc, ac) + "</g>";
+    } else if (f === "duo") {
+      inner = bg + shadow + '<g transform="translate(-14 14) scale(.86)">' + sitSVG(p, acc, ac) + "</g>";
+      inner += '<g transform="translate(108 86) scale(.5)">' + sitSVG(p, "bow", ac) + "</g>";
+    } else if (f === "trio") {
+      inner = bg + shadow + '<g transform="translate(34 4) scale(.68)">' + sitSVG(p, acc, ac) + "</g>";
+      inner += '<g transform="translate(-4 84) scale(.5)">' + sitSVG(p, "none", ac) + "</g>";
+      inner += '<g transform="translate(104 84) scale(.5)">' + sitSVG(PAL.red, "none", ac) + "</g>";
+    }
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">' + inner + "</svg>";
+    return (ART_CACHE[key] = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg));
+  }
+  function logoSVG() {
+    return '<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="104" r="96" fill="#2f8a4f"/><g transform="translate(100 112) scale(1.05) translate(-100 -80)">' + headSVG(PAL.classic, "none", "") + "</g></svg>";
+  }
+
+  /* =========================================================
+     3. Catalog (generated, deterministic)
+     ========================================================= */
+  var BRANDS = ["Bamboo Bunch", "Cuddle Grove", "PandaPal", "Snuggle Peak", "Mochi & Co.", "Little Bao", "Softwood Toys", "Misty Mountain Plush"];
+  var NAMES = ["Bao", "Mochi", "Dumpling", "Lychee", "Pudding", "Boba", "Tofu", "Momo", "Kiko", "Bun", "Sesame", "Ping", "Lulu", "Noodle", "Biscuit", "Peanut", "Yuzu", "Panko", "Taro", "Juniper", "Pepper", "Clover", "Maple", "Oreo"];
+  var ADJ = ["Cuddly", "Huggable", "Squishy", "Fluffy", "Snuggly", "Classic", "Chubby", "Cosy", "Soft-Touch", "Plush"];
+  var ACC_LABEL = { none: "", bamboo: "with Bamboo", bow: "with Bow", scarf: "with Knit Scarf", heart: "with Heart", star: "with Star", santa: "in Santa Hat", party: "in Party Hat", flower: "with Flower", hoodie: "in Hoodie", bottle: "with Bottle", box: "Gift Box" };
+
+  var DEPTS = [
+    { g: "Classic Pandas", art: { pal: "classic", acc: "bamboo", form: "sit" }, cats: [
+      { c: "Sitting Pandas", noun: "Sitting Panda Plush", form: "sit", sizes: [8, 10, 12, 16], accs: ["none", "bamboo", "bow", "scarf", "heart"], n: 12 },
+      { c: "Lying Pandas", noun: "Lying Panda Plush", form: "lie", sizes: [14, 18, 24], accs: ["none", "bow", "scarf"], n: 6 },
+      { c: "Bamboo Buddies", noun: "Panda Plush with Bamboo", form: "sit", sizes: [8, 12], accs: ["bamboo"], n: 6, noAccLabel: true }
+    ]},
+    { g: "Giant & Jumbo", art: { pal: "classic", acc: "heart", form: "sit" }, cats: [
+      { c: "Giant 24–30 in", noun: "Giant Panda Plush", form: "sit", sizes: [24, 30], accs: ["none", "heart", "scarf"], n: 6 },
+      { c: "Jumbo 36 in+", noun: "Jumbo Panda Plush", form: "sit", sizes: [36, 48, 60], accs: ["none", "bow"], n: 5 },
+      { c: "Floor Loungers", noun: "Floor Lounger Panda", form: "lie", sizes: [40, 48], accs: ["none"], n: 4 }
+    ]},
+    { g: "Baby & Toddler", art: { pal: "pink", acc: "bottle", form: "sit" }, cats: [
+      { c: "Baby Cubs", noun: "Baby Panda Cub", form: "sit", sizes: [6, 8], accs: ["none", "bottle", "bow"], pals: ["classic", "pink", "mint"], n: 7, age: "0+" },
+      { c: "Lovey Blankets", noun: "Panda Lovey Blanket", form: "face", sizes: [12, 14], accs: ["none", "bow"], pals: ["classic", "pink", "mint", "lavender"], n: 6, age: "0+" },
+      { c: "Rattles & Teethers", noun: "Panda Rattle", form: "mini", sizes: [5, 6], accs: ["none"], pals: ["classic", "mint"], n: 4, age: "0+" }
+    ]},
+    { g: "Red Pandas", art: { pal: "red", acc: "none", form: "sit" }, cats: [
+      { c: "Red Panda Plush", noun: "Red Panda Plush", form: "sit", sizes: [8, 12, 16], accs: ["none", "scarf", "flower"], pals: ["red"], n: 8 },
+      { c: "Sleepy Red Pandas", noun: "Sleepy Red Panda", form: "lie", sizes: [14, 20], accs: ["none"], pals: ["red"], n: 4 },
+      { c: "Red Panda Minis", noun: "Red Panda Keychain", form: "mini", sizes: [3, 4], accs: ["none"], pals: ["red"], n: 4 }
+    ]},
+    { g: "Minis & Keychains", art: { pal: "classic", acc: "none", form: "mini" }, cats: [
+      { c: "Keychains", noun: "Panda Keychain", form: "mini", sizes: [3, 4], accs: ["none", "bow", "heart"], pals: ["classic", "pink", "mint", "lavender"], n: 8 },
+      { c: "Bag Clips", noun: "Panda Bag Clip", form: "mini", sizes: [4, 5], accs: ["none", "star"], pals: ["classic", "grey"], n: 5 },
+      { c: "Mystery Minis", noun: "Mystery Mini Panda (Blind Box)", form: "mini", sizes: [3], accs: ["box"], pals: ["classic"], n: 3, noAccLabel: true }
+    ]},
+    { g: "Pillows & Cushions", art: { pal: "classic", acc: "none", form: "face" }, cats: [
+      { c: "Face Pillows", noun: "Panda Face Pillow", form: "face", sizes: [14, 16, 18], accs: ["none", "bow", "flower"], pals: ["classic", "pink", "grey"], n: 7 },
+      { c: "Body Pillows", noun: "Panda Body Pillow", form: "lie", sizes: [36, 48], accs: ["none"], n: 4 },
+      { c: "Travel Neck Pillows", noun: "Panda Travel Neck Pillow", form: "face", sizes: [12], accs: ["none"], pals: ["classic", "mint", "lavender"], n: 4 }
+    ]},
+    { g: "Pastel Pandas", art: { pal: "lavender", acc: "flower", form: "sit" }, cats: [
+      { c: "Blush Pink", noun: "Pink Panda Plush", form: "sit", sizes: [8, 12, 16], accs: ["none", "bow", "heart"], pals: ["pink"], n: 6 },
+      { c: "Mint", noun: "Mint Panda Plush", form: "sit", sizes: [8, 12], accs: ["none", "flower"], pals: ["mint"], n: 5 },
+      { c: "Lavender", noun: "Lavender Panda Plush", form: "sit", sizes: [8, 12, 16], accs: ["none", "star", "bow"], pals: ["lavender"], n: 5 },
+      { c: "Cocoa & Grey", noun: "Panda Plush", form: "sit", sizes: [10, 14], accs: ["none", "scarf"], pals: ["cocoa", "grey"], n: 5 }
+    ]},
+    { g: "Seasonal & Holiday", art: { pal: "classic", acc: "santa", form: "sit" }, cats: [
+      { c: "Holiday", noun: "Holiday Panda Plush", form: "sit", sizes: [8, 12, 16], accs: ["santa", "scarf"], n: 6 },
+      { c: "Valentine's", noun: "Valentine Panda Plush", form: "sit", sizes: [8, 12], accs: ["heart"], pals: ["classic", "pink"], n: 5 },
+      { c: "Birthday", noun: "Birthday Panda Plush", form: "sit", sizes: [8, 12], accs: ["party"], pals: ["classic", "mint", "lavender"], n: 4 },
+      { c: "Spring", noun: "Spring Panda Plush", form: "sit", sizes: [8, 10], accs: ["flower"], pals: ["classic", "mint", "pink"], n: 4 }
+    ]},
+    { g: "Gift Sets", art: { pal: "classic", acc: "heart", form: "duo" }, cats: [
+      { c: "Parent & Cub Sets", noun: "Panda Parent & Cub Set", form: "duo", sizes: [12, 16], accs: ["none", "heart"], pals: ["classic", "pink"], n: 5 },
+      { c: "Family Trios", noun: "Panda Family Trio", form: "trio", sizes: [12], accs: ["none"], n: 3 },
+      { c: "Gift Boxes", noun: "Panda Gift Box", form: "sit", sizes: [8, 10], accs: ["box"], n: 4, noAccLabel: true }
+    ]},
+    { g: "Weighted & Sensory", art: { pal: "grey", acc: "scarf", form: "sit" }, cats: [
+      { c: "Weighted Pandas", noun: "Weighted Panda Plush", form: "sit", sizes: [14, 18], accs: ["none", "scarf"], pals: ["classic", "grey", "lavender"], n: 5, weighted: true },
+      { c: "Microwavable Warmers", noun: "Heatable Panda Warmer", form: "sit", sizes: [10, 12], accs: ["none", "scarf"], pals: ["classic", "cocoa"], n: 4, warmer: true }
+    ]},
+    { g: "Plush Outfits", art: { pal: "classic", acc: "hoodie", form: "sit" }, cats: [
+      { c: "Hoodies & Sweaters", noun: "Panda Plush in Hoodie", form: "sit", sizes: [10, 12, 16], accs: ["hoodie"], n: 6, noAccLabel: true },
+      { c: "Hats", noun: "Panda Plush Hat Set", form: "sit", sizes: [10, 12], accs: ["santa", "party"], n: 4 },
+      { c: "Scarves", noun: "Panda Plush Scarf Set", form: "sit", sizes: [10, 12], accs: ["scarf"], n: 4, noAccLabel: true }
+    ]}
+  ];
+
+  var ITEMS = [], BY_ID = {}, GROUP_COUNT = {}, CAT_COUNT = {}, CAT_ART = {}, BRAND_COUNT = {};
+  (function buildCatalog() {
+    var r = rng(20261113), id = 10001;
+    var pick = function (a) { return a[Math.floor(r() * a.length)]; };
+    DEPTS.forEach(function (D, di) {
+      D.cats.forEach(function (C) {
+        for (var i = 0; i < C.n; i++) {
+          var pal = pick(C.pals || ["classic"]), acc = C.accs[i % C.accs.length], size = pick(C.sizes);
+          var ac = Math.floor(r() * ACC_COLORS.length), brand = pick(BRANDS), name = pick(NAMES), adj = pick(ADJ);
+          var form = C.form;
+          var base;
+          if (form === "mini") base = 6 + size * 1.5 + r() * 4;
+          else if (form === "duo" || form === "trio") base = 28 + size * 2.2 + r() * 10;
+          else base = 8 + size * 1.55 + r() * 8 + (size >= 36 ? size * 1.1 : 0);
+          if (C.weighted) base += 18; if (C.warmer) base += 8;
+          var sale = Math.round(base) - 0.01, list = Math.round(sale * (1.12 + r() * 0.2)) - 0.01;
+          var onSale = r() < 0.32;
+          var inStock = r() < 0.84;
+          var accTxt = C.noAccLabel ? "" : ACC_LABEL[acc];
+          var colorTxt = PAL[pal].name;
+          var title = name + " the " + adj + " " + C.noun + (accTxt ? " " + accTxt : "") + ", " + size + " in" + (pal !== "classic" && pal !== "red" && C.noun.indexOf(colorTxt.split(" ")[0]) === -1 ? ", " + colorTxt : "");
+          var washable = form === "face" || form === "lie" || r() < 0.5;
+          var it = {
+            id: String(id), sku: "PP-" + (["CL", "GJ", "BB", "RP", "MK", "PC", "PS", "SH", "GS", "WS", "PO"][di]) + "-" + String(id).slice(-4) + "-" + size,
+            title: title, name: name, brand: brand, g: D.g, c: C.c, size: size, color: colorTxt, pal: pal,
+            art: { pal: pal, acc: acc, form: form, ac: ac },
+            price: sale, list: onSale ? list : null, inStock: inStock,
+            qty: inStock ? 3 + Math.floor(r() * 240) : 0, leadDays: inStock ? 0 : 5 + Math.floor(r() * 16),
+            age: C.age || (form === "mini" ? "3+" : (size >= 36 ? "3+" : "All ages")),
+            material: C.weighted ? "Minky plush shell, glass-bead weighted fill" : (C.warmer ? "Velour plush, removable wheat & lavender heat pack" : "Ultra-soft polyester plush, PP cotton fill"),
+            care: washable ? "Machine washable, gentle cycle, air dry" : "Surface wash only",
+            weight: C.weighted ? (size >= 18 ? "4 lb" : "3 lb") : null,
+            newArrival: r() < 0.14
+          };
+          var bullets = [];
+          bullets.push("Measures approx. " + size + " in " + (form === "lie" ? "long" : (form === "face" ? "across" : "tall")));
+          if (form === "mini") bullets.push("Sturdy metal ring and clasp, ideal for bags, keys and backpacks");
+          else bullets.push("Super-soft " + (C.weighted ? "minky" : "short-pile") + " fabric with embroidered-safe eyes");
+          if (C.weighted) bullets.push("Evenly weighted (" + it.weight + ") for calming deep-pressure hugs");
+          if (C.warmer) bullets.push("Removable heat pack: microwave 60–90 seconds for gentle warmth");
+          if (it.age === "0+") bullets.push("Baby-safe: no small parts, tested to EN71 / ASTM F963");
+          if (acc !== "none" && acc !== "box" && !C.noAccLabel) bullets.push("Includes " + ACC_LABEL[acc].replace(/^(with|in) /, "").toLowerCase() + " accessory, stitched in place");
+          if (acc === "box") bullets.push("Arrives in a ribbon-tied gift box, ready to give");
+          bullets.push(it.care);
+          it.bullets = bullets;
+          it.desc = name + " is a " + adj.toLowerCase() + " " + C.noun.toLowerCase() + " from " + brand + ", made for " +
+            (it.age === "0+" ? "little hands and first hugs" : "cuddles, naps and shelf-sitting") + ". " +
+            (form === "lie" ? "The flat, sprawling pose makes it a perfect pillow companion. " : "") +
+            (form === "face" ? "Soft piped edges and a plump fill keep its shape night after night. " : "") +
+            "Every panda is hand-checked for stitching and fill before it leaves our warehouse.";
+          ITEMS.push(it); BY_ID[it.id] = it; id++;
+          GROUP_COUNT[D.g] = (GROUP_COUNT[D.g] || 0) + 1;
+          CAT_COUNT[D.g + "|" + C.c] = (CAT_COUNT[D.g + "|" + C.c] || 0) + 1;
+          BRAND_COUNT[brand] = (BRAND_COUNT[brand] || 0) + 1;
+          if (!CAT_ART[D.g + "|" + C.c]) CAT_ART[D.g + "|" + C.c] = it.art;
+        }
+      });
+    });
+  })();
+  var GROUP_OF = {}; DEPTS.forEach(function (D) { GROUP_OF[D.g] = D; });
+
+  var PRICES = [["u10", "Under $10", 0, 10], ["10-25", "$10 to $25", 10, 25], ["25-50", "$25 to $50", 25, 50], ["50-100", "$50 to $100", 50, 100], ["100", "$100 and up", 100, 1e9]];
+  var SIZES = [["s", "Mini (under 6 in)", 0, 6], ["m", "Small (6–11 in)", 6, 12], ["l", "Medium (12–20 in)", 12, 21], ["xl", "Large (24–30 in)", 21, 31], ["xxl", "Jumbo (36 in+)", 31, 999]];
+  var SORTS = [["rel", "Best match"], ["plo", "Price: low to high"], ["phi", "Price: high to low"], ["az", "Name: A to Z"], ["new", "New arrivals"], ["stk", "In stock first"]];
+  var PER_PAGE = 24;
+
+  /* =========================================================
+     4. Cart (localStorage, like the original quote cart)
+     ========================================================= */
+  var CART = store("ppCart") || [];
+  function saveCart() { store("ppCart", CART); updateBadge(); }
+  function cartCount() { return CART.reduce(function (s, l) { return s + (Number(l.qty) || 0); }, 0); }
+  function cartTotal() { return CART.reduce(function (s, l) { return s + l.price * l.qty; }, 0); }
+  function updateBadge() { $("#gnCartN").textContent = cartCount(); $("#quoteCount").textContent = cartCount(); }
+  function addToCart(id, qty) {
+    var it = BY_ID[id]; if (!it) return;
+    qty = Math.max(1, parseInt(qty, 10) || 1);
+    var line = CART.find(function (l) { return l.id === id; });
+    if (line) line.qty += qty; else CART.push({ id: id, sku: it.sku, title: it.title, brand: it.brand, price: it.price, qty: qty });
+    saveCart(); renderCart();
+    toast("Added " + qty + " &times; " + h(it.name) + " to your cart <a id=\"tView\">View cart</a>");
+    var v = $("#tView"); if (v) v.onclick = openCart;
+  }
+
+  /* =========================================================
+     5. Search
+     ========================================================= */
+  function norm(s) { return " " + String(s || "").toLowerCase().replace(/["”″]|\binch(es)?\b/g, " in ").replace(/(\d)\s*in\b/g, "$1 in").replace(/[^a-z0-9.\- ]/g, " ").replace(/\s+/g, " ") + " "; }
+  var STOP = { a: 1, an: 1, the: 1, and: 1, "for": 1, of: 1, "with": 1, plush: 1, plushie: 1, plushy: 1, plushies: 1, plushys: 1 };
+  function tokens(q) { return norm(q).trim().split(" ").filter(function (t) { return t && !STOP[t]; }).map(function (t) { return t.replace(/ies$/, "y").replace(/([^s])s$/, "$1"); }); }
+  function searchItems(list, q) {
+    var tk = tokens(q); if (!tk.length) return list.slice();
+    var out = [];
+    list.forEach(function (it, n) {
+      if (!it._s) { it._t = norm(it.title); it._s = it._t + norm(it.brand) + norm(it.sku) + norm(it.c) + norm(it.g) + norm(it.color) + norm(it.id); }
+      for (var k = 0; k < tk.length; k++) if (it._s.indexOf(tk[k]) === -1) return;
+      var score = it.sku.toLowerCase() === q.trim().toLowerCase() || it.id === q.trim() ? 5 : (tk.every(function (t) { return it._t.indexOf(t) !== -1; }) ? 3 : 1);
+      out.push({ it: it, s: score, n: n });
+    });
+    out.sort(function (a, b) { return b.s - a.s || a.n - b.n; });
+    return out.map(function (x) { return x.it; });
+  }
+
+  /* =========================================================
+     6. Router state
+     ========================================================= */
+  function blank() { return { q: "", g: "", c: "", b: [], col: [], p: "", sz: "", stk: false, sort: "rel", v: "grid", pg: 1 }; }
+  function parse() {
+    var raw = location.hash.replace(/^#\/?/, "");
+    if (raw.indexOf("p/") === 0) return { view: "pdp", id: decodeURIComponent(raw.slice(2)) };
+    if (raw.indexOf("s") === 0) {
+      var qp = new URLSearchParams(raw.split("?")[1] || ""), s = blank();
+      s.q = qp.get("q") || ""; s.g = qp.get("g") || ""; s.c = qp.get("c") || "";
+      s.b = (qp.get("b") || "").split("~").filter(Boolean); s.col = (qp.get("col") || "").split("~").filter(Boolean);
+      s.p = qp.get("p") || ""; s.sz = qp.get("sz") || ""; s.stk = qp.get("stk") === "1";
+      s.sort = qp.get("sort") || "rel"; s.v = qp.get("v") || (store("ppView") || "grid"); s.pg = Math.max(1, parseInt(qp.get("pg"), 10) || 1);
+      s.view = "browse"; return s;
+    }
+    return { view: "home" };
+  }
+  function href(s) {
+    var qp = new URLSearchParams();
+    if (s.q) qp.set("q", s.q); if (s.g) qp.set("g", s.g); if (s.c) qp.set("c", s.c);
+    if (s.b && s.b.length) qp.set("b", s.b.join("~")); if (s.col && s.col.length) qp.set("col", s.col.join("~"));
+    if (s.p) qp.set("p", s.p); if (s.sz) qp.set("sz", s.sz); if (s.stk) qp.set("stk", "1");
+    if (s.sort && s.sort !== "rel") qp.set("sort", s.sort); if (s.v && s.v !== "grid") qp.set("v", s.v);
+    if (s.pg > 1) qp.set("pg", s.pg);
+    return "#/s?" + qp.toString();
+  }
+  function with_(s, patch) { var n = JSON.parse(JSON.stringify(s)); for (var k in patch) n[k] = patch[k]; if (!("pg" in patch)) n.pg = 1; return n; }
+
+  /* =========================================================
+     7. Shared pieces
+     ========================================================= */
+  function priceHTML(it) { return '<div class="gn-pr"><b>' + money(it.price) + "</b>" + (it.list ? "<s>" + money(it.list) + "</s>" : "") + "<em>each</em></div>"; }
+  function availHTML(it) { return it.inStock ? '<div class="gn-av ok">&#10003; In stock' + (it.qty < 20 ? ", only " + it.qty + " left" : "") + "</div>" : '<div class="gn-av no">Ships in ' + it.leadDays + " days</div>"; }
+  function card(it) {
+    return '<div class="gn-card" data-id="' + it.id + '"><div class="im">' + (it.list ? '<span class="tag">Sale</span>' : (it.newArrival ? '<span class="tag" style="background:#2f8a4f">New</span>' : "")) +
+      '<img loading="lazy" src="' + pandaArt(it.art) + '" alt="' + h(it.title) + '"></div>' +
+      '<div class="bd"><div class="br">' + h(it.brand) + '</div><div class="tt">' + h(it.title) + '</div><div class="sk">Item # ' + it.id + "</div></div>" +
+      '<div class="pr">' + priceHTML(it) + availHTML(it) + '<button class="gn-add" data-add="' + it.id + '" type="button">Add to cart</button></div></div>';
+  }
+  function bindCards(root) {
+    $$(".gn-card", root).forEach(function (el) {
+      el.onclick = function (e) {
+        var add = e.target.closest("[data-add]");
+        if (add) { e.stopPropagation(); addToCart(add.getAttribute("data-add"), 1); return; }
+        location.hash = "#/p/" + el.getAttribute("data-id");
+      };
+    });
+  }
+  var toastTimer;
+  function toast(html) {
+    var t = $("#gnToast"); t.innerHTML = html; t.classList.add("on");
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { t.classList.remove("on"); }, 3200);
+  }
+
+  /* =========================================================
+     8. Views
+     ========================================================= */
+  var mainEl = $("#gnMain");
+
+  function renderHome() {
+    document.title = "Panda Plush Co. | Panda Plushies & Soft Toys";
+    $("#gnQ").value = ""; $("#gnScope").value = "";
+    var pop = Object.keys(CAT_COUNT).sort(function (a, b) { return CAT_COUNT[b] - CAT_COUNT[a]; }).slice(0, 12);
+    var brands = Object.keys(BRAND_COUNT).sort(function (a, b) { return BRAND_COUNT[b] - BRAND_COUNT[a]; });
+    var deals = ITEMS.filter(function (i) { return i.list && i.inStock; }).slice(0, 12);
+    var recent = (store("ppRecent") || []).map(function (id) { return BY_ID[id]; }).filter(Boolean).slice(0, 12);
+    mainEl.innerHTML =
+      '<div class="gn-hero"><div class="a"><h1>Panda plushies for every hug, delivered to your door</h1>' +
+        "<p>Shop " + num(ITEMS.length) + " pandas: classic, giant, red pandas, pastel, minis, pillows and gift sets. Soft, safe and hand-checked before they ship.</p>" +
+        '<a class="cta" id="gnShopAll">Shop all departments</a><a class="cta alt" href="' + href(with_(blank(), { sort: "new" })) + '">New arrivals</a>' +
+        '<img class="art" src="' + pandaArt({ pal: "classic", acc: "bamboo", form: "sit" }) + '" alt=""></div>' +
+        '<div class="b"><h3>How ordering works</h3><ol><li><b>Find your panda.</b> Search, or browse by department.</li><li><b>Place your order request.</b> Add a gift note if it\'s a present. No payment is taken online.</li><li><b>We confirm and ship.</b> We email you a confirmation and tracking within one business day.</li></ol>' +
+        '<div style="margin-top:10px">Looking for a custom panda? Call <a href="tel:8005550142" style="color:var(--gb);font-weight:700">800-555-0142</a></div></div></div>' +
+      '<section class="gn-sec"><h2>Shop by department</h2><div class="gn-depts">' +
+        DEPTS.map(function (D) {
+          return '<a class="gn-dept" href="' + href(with_(blank(), { g: D.g })) + '"><img loading="lazy" src="' + pandaArt(D.art) + '" alt=""><b>' + h(D.g) + "</b><small>" + num(GROUP_COUNT[D.g] || 0) + " items</small></a>";
+        }).join("") + "</div></section>" +
+      (deals.length ? '<section class="gn-sec"><h2>Panda deals <a href="' + href(with_(blank(), { sort: "plo" })) + '">Shop all &rsaquo;</a></h2><div class="gn-row" id="gnDeals">' + deals.map(card).join("") + "</div></section>" : "") +
+      '<section class="gn-sec"><h2>Popular categories</h2><div class="gn-depts">' +
+        pop.map(function (k) {
+          var gc = k.split("|");
+          return '<a class="gn-dept" href="' + href(with_(blank(), { g: gc[0], c: gc[1] })) + '"><img loading="lazy" src="' + pandaArt(CAT_ART[k]) + '" alt=""><b>' + h(gc[1]) + "</b><small>" + num(CAT_COUNT[k]) + " items</small></a>";
+        }).join("") + "</div></section>" +
+      '<section class="gn-sec"><h2>Shop by brand</h2><div class="gn-brands">' +
+        brands.map(function (b) { return '<a href="' + href(with_(blank(), { b: [b] })) + '">' + h(b) + "</a>"; }).join("") + "</div></section>" +
+      (recent.length ? '<section class="gn-sec"><h2>Recently viewed</h2><div class="gn-row">' + recent.map(card).join("") + "</div></section>" : "");
+    $("#gnShopAll").onclick = function () { openMega(); };
+    bindCards(mainEl);
+    window.scrollTo(0, 0);
+  }
+
+  function inRange(table, key, v) { if (!key) return true; var b = table.find(function (x) { return x[0] === key; }); return !b || (v >= b[2] && v < b[3]); }
+
+  function renderBrowse(s) {
+    $("#gnQ").value = s.q; $("#gnScope").value = s.q ? s.g : "";
+    var base = s.q ? searchItems(ITEMS, s.q) : ITEMS.slice();
+    var inG = base.filter(function (i) { return (!s.g || i.g === s.g); });
+    var inC = inG.filter(function (i) { return (!s.c || i.c === s.c); });
+    var list = inC.filter(function (i) {
+      return (!s.b.length || s.b.indexOf(i.brand) !== -1) && (!s.col.length || s.col.indexOf(i.color) !== -1) &&
+        inRange(PRICES, s.p, i.price) && inRange(SIZES, s.sz, i.size) && (!s.stk || i.inStock);
+    });
+    var sorters = {
+      plo: function (a, b) { return a.price - b.price; }, phi: function (a, b) { return b.price - a.price; },
+      az: function (a, b) { return a.title.localeCompare(b.title); }, new: function (a, b) { return (b.newArrival - a.newArrival) || (b.id - a.id); },
+      stk: function (a, b) { return (b.inStock - a.inStock); }
+    };
+    if (sorters[s.sort]) list.sort(sorters[s.sort]);
+    var pages = Math.max(1, Math.ceil(list.length / PER_PAGE)), pg = Math.min(s.pg, pages);
+    var shown = list.slice((pg - 1) * PER_PAGE, pg * PER_PAGE);
+
+    var title = s.q ? 'Results for "' + h(s.q) + '"' : (s.c ? h(s.c) : (s.g ? h(s.g) : "All panda plushies"));
+    document.title = (s.q ? s.q : (s.c || s.g || "All products")) + " | Panda Plush Co.";
+
+    // counts for facets (computed against inC so they reflect other filters loosely, like the original)
+    function countBy(arr, f) { var m = {}; arr.forEach(function (i) { var k = f(i); m[k] = (m[k] || 0) + 1; }); return m; }
+    var bCount = countBy(inC, function (i) { return i.brand; }), colCount = countBy(inC, function (i) { return i.color; });
+
+    var tree = "";
+    if (!s.g) {
+      var gCount = countBy(base, function (i) { return i.g; });
+      tree = DEPTS.filter(function (D) { return gCount[D.g]; }).map(function (D) {
+        return '<a href="' + href(with_(s, { g: D.g, c: "" })) + '"><span>' + h(D.g) + "</span><small>" + gCount[D.g] + "</small></a>";
+      }).join("");
+    } else {
+      var cCount = countBy(inG, function (i) { return i.c; });
+      tree = '<a class="up" href="' + href(with_(s, { g: "", c: "" })) + '">&lsaquo; All departments</a>' +
+        '<a class="' + (s.c ? "up" : "cur") + '" href="' + href(with_(s, { c: "" })) + '"><span>' + h(s.g) + "</span><small>" + inG.length + "</small></a>" +
+        GROUP_OF[s.g].cats.filter(function (C) { return cCount[C.c]; }).map(function (C) {
+          return '<a class="' + (s.c === C.c ? "cur" : "") + '" style="padding-left:12px" href="' + href(with_(s, { c: C.c })) + '"><span>' + h(C.c) + "</span><small>" + cCount[C.c] + "</small></a>";
+        }).join("");
+    }
+    function checks(name, keys, counts, sel, swatch) {
+      return keys.filter(function (k) { return counts[k] || sel.indexOf(k) !== -1; }).map(function (k) {
+        var sw = swatch ? '<i class="sw" style="background:' + swatch(k) + '"></i>' : "";
+        return '<label><input type="checkbox" data-f="' + name + '" value="' + h(k) + '"' + (sel.indexOf(k) !== -1 ? " checked" : "") + ">" + sw + "<span>" + h(k) + "</span><small>" + (counts[k] || 0) + "</small></label>";
+      }).join("");
+    }
+    function radios(name, table, cur) {
+      return '<label><input type="radio" name="' + name + '" data-f="' + name + '" value=""' + (!cur ? " checked" : "") + "><span>Any</span></label>" +
+        table.map(function (x) { return '<label><input type="radio" name="' + name + '" data-f="' + name + '" value="' + x[0] + '"' + (cur === x[0] ? " checked" : "") + "><span>" + x[1] + "</span></label>"; }).join("");
+    }
+    var colorKeys = Object.keys(PAL).map(function (k) { return PAL[k].name; });
+    var swatchOf = function (name) { for (var k in PAL) if (PAL[k].name === name) return PAL[k].red ? PAL[k].fur : (k === "classic" ? "linear-gradient(90deg,#2b2b30 50%,#fff 50%)" : PAL[k].dark); return "#ccc"; };
+
+    var side =
+      '<aside class="gn-side" id="gnSide"><div class="side-head">Filters <button class="close" id="sideClose" type="button" aria-label="Close filters">&times;</button></div>' +
+      '<div class="fb"><h4>Department</h4><div class="tree">' + tree + "</div></div>" +
+      '<div class="fb"><h4>Availability</h4><label><input type="checkbox" data-f="stk"' + (s.stk ? " checked" : "") + "><span>In stock only</span></label></div>" +
+      '<div class="fb"><h4>Price</h4>' + radios("p", PRICES, s.p) + "</div>" +
+      '<div class="fb"><h4>Size</h4>' + radios("sz", SIZES, s.sz) + "</div>" +
+      '<div class="fb"><h4>Colour</h4>' + checks("col", colorKeys, colCount, s.col, swatchOf) + "</div>" +
+      '<div class="fb"><h4>Brand</h4>' + checks("b", Object.keys(BRAND_COUNT).sort(), bCount, s.b) + "</div></aside>";
+
+    var chips = [];
+    if (s.q) chips.push(['"' + s.q + '"', with_(s, { q: "" })]);
+    if (s.c) chips.push([s.c, with_(s, { c: "" })]);
+    s.b.forEach(function (b) { chips.push([b, with_(s, { b: s.b.filter(function (x) { return x !== b; }) })]); });
+    s.col.forEach(function (c) { chips.push([c, with_(s, { col: s.col.filter(function (x) { return x !== c; }) })]); });
+    if (s.p) chips.push([PRICES.find(function (x) { return x[0] === s.p; })[1], with_(s, { p: "" })]);
+    if (s.sz) chips.push([SIZES.find(function (x) { return x[0] === s.sz; })[1], with_(s, { sz: "" })]);
+    if (s.stk) chips.push(["In stock only", with_(s, { stk: false })]);
+
+    var crumbs = '<a href="#/">Home</a>' + (s.g ? '<span>&rsaquo;</span><a href="' + href(with_(blank(), { g: s.g })) + '">' + h(s.g) + "</a>" : "") +
+      (s.c ? "<span>&rsaquo;</span>" + h(s.c) : "") + (s.q ? '<span>&rsaquo;</span>Search' : "") + (!s.g && !s.q ? "<span>&rsaquo;</span>All products" : "");
+
+    var subcats = (s.g && !s.c && !s.q) ? '<div class="gn-subcats">' + GROUP_OF[s.g].cats.map(function (C) {
+      return '<a href="' + href(with_(s, { c: C.c })) + '"><img src="' + pandaArt(CAT_ART[s.g + "|" + C.c]) + '" alt="">' + h(C.c) + "</a>";
+    }).join("") + "</div>" : "";
+
+    var pager = "";
+    if (pages > 1) {
+      pager = '<div class="gn-pages"><a class="' + (pg === 1 ? "dis" : "") + '" href="' + href(with_(s, { pg: pg - 1 })) + '">&lsaquo; Prev</a>';
+      for (var p = 1; p <= pages; p++) {
+        if (p === 1 || p === pages || Math.abs(p - pg) <= 2) pager += '<a class="' + (p === pg ? "on" : "") + '" href="' + href(with_(s, { pg: p })) + '">' + p + "</a>";
+        else if (Math.abs(p - pg) === 3) pager += '<span style="padding:7px 4px;color:var(--gg)">…</span>';
+      }
+      pager += '<a class="' + (pg === pages ? "dis" : "") + '" href="' + href(with_(s, { pg: pg + 1 })) + '">Next &rsaquo;</a></div>';
+    }
+
+    mainEl.innerHTML =
+      '<div class="gn-crumb">' + crumbs + "</div>" +
+      '<div class="gn-browse">' + side + "<section>" +
+        '<div class="gn-head2"><div><h1>' + title + '</h1><div class="cnt">' + num(list.length) + " item" + (list.length === 1 ? "" : "s") + (pages > 1 ? " &middot; page " + pg + " of " + pages : "") + "</div></div>" +
+        '<div class="gn-tools"><button class="fbtn" id="fbtn" type="button">Filters</button><label>Sort <select id="gnSort">' +
+          SORTS.map(function (x) { return '<option value="' + x[0] + '"' + (s.sort === x[0] ? " selected" : "") + ">" + x[1] + "</option>"; }).join("") +
+        '</select></label><div class="vt"><button type="button" data-v="grid" class="' + (s.v !== "list" ? "on" : "") + '">Grid</button><button type="button" data-v="list" class="' + (s.v === "list" ? "on" : "") + '">List</button></div></div></div>' +
+        (chips.length ? '<div class="gn-chips">' + chips.map(function (c) { return '<a href="' + href(c[1]) + '">' + h(c[0]) + " &times;</a>"; }).join("") + '<a class="clr" href="' + href(with_(blank(), { g: s.g })) + '">Clear all</a></div>' : "") +
+        subcats +
+        (shown.length ? '<div class="gn-grid' + (s.v === "list" ? " gn-list" : "") + '">' + shown.map(card).join("") + "</div>" :
+          '<div class="gn-empty"><h3>No pandas match those filters.</h3><p>Try removing a filter or searching for something else.</p><p><a href="' + href(blank()) + '" style="color:var(--gb);font-weight:600">Browse all pandas</a></p></div>') +
+        pager + "</section></div>";
+
+    bindCards(mainEl);
+    $("#gnSort").onchange = function () { location.hash = href(with_(s, { sort: this.value })); };
+    $$(".vt button").forEach(function (b) { b.onclick = function () { store("ppView", b.dataset.v); location.hash = href(with_(s, { v: b.dataset.v, pg: pg })); }; });
+    $$("#gnSide [data-f]").forEach(function (inp) {
+      inp.onchange = function () {
+        var f = inp.dataset.f, patch = {};
+        if (f === "stk") patch.stk = inp.checked;
+        else if (f === "p" || f === "sz") patch[f] = inp.value;
+        else patch[f] = $$('#gnSide [data-f="' + f + '"]:checked').map(function (x) { return x.value; });
+        closeSide(); location.hash = href(with_(s, patch));
+      };
+    });
+    $("#fbtn").onclick = openSide; $("#sideClose").onclick = closeSide;
+  }
+
+  function renderPdp(id) {
+    var it = BY_ID[id];
+    if (!it) { mainEl.innerHTML = '<div class="gn-empty"><h3>That panda could not be found.</h3><p><a href="#/" style="color:var(--gb);font-weight:600">Back to the store</a></p></div>'; return; }
+    document.title = it.title + " | Panda Plush Co.";
+    var rec = (store("ppRecent") || []).filter(function (x) { return x !== id; }); rec.unshift(id); store("ppRecent", rec.slice(0, 20));
+    var specs = [["Brand", it.brand], ["Item #", it.id], ["SKU", it.sku], ["Size", it.size + " in"], ["Colour", it.color], ["Material", it.material], ["Recommended age", it.age], ["Care", it.care]];
+    if (it.weight) specs.push(["Weight", it.weight]);
+    var more = ITEMS.filter(function (x) { return x.c === it.c && x.id !== it.id; }).slice(0, 10);
+    mainEl.innerHTML =
+      '<div class="gn-crumb"><a href="#/">Home</a><span>&rsaquo;</span><a href="' + href(with_(blank(), { g: it.g })) + '">' + h(it.g) + '</a><span>&rsaquo;</span><a href="' + href(with_(blank(), { g: it.g, c: it.c })) + '">' + h(it.c) + "</a></div>" +
+      '<div class="gn-pdp"><div class="pim"><img src="' + pandaArt(it.art) + '" alt="' + h(it.title) + '"></div>' +
+      '<div><div class="meta" style="margin:0"><a href="' + href(with_(blank(), { b: [it.brand] })) + '">' + h(it.brand) + "</a></div><h1>" + h(it.title) + "</h1>" +
+        '<div class="meta">Item # ' + it.id + " &middot; SKU " + h(it.sku) + "</div>" +
+        "<ul>" + it.bullets.map(function (b) { return "<li>" + h(b) + "</li>"; }).join("") + "</ul>" +
+        '<h3>About this panda</h3><div class="desc">' + h(it.desc) + "</div>" +
+        '<h3>Specifications</h3><table class="gn-specs">' + specs.map(function (r) { return "<tr><td>" + h(r[0]) + "</td><td>" + h(r[1]) + "</td></tr>"; }).join("") + "</table></div>" +
+      '<div class="gn-buy">' + priceHTML(it) + (it.list ? '<div style="color:#c0392b;font-size:13px;font-weight:600;margin-top:2px">You save ' + money(it.list - it.price) + "</div>" : "") +
+        availHTML(it) +
+        '<div class="qty"><label for="pdpQty">Qty</label><input type="number" id="pdpQty" min="1" step="1" value="1"></div>' +
+        '<button class="gn-add" id="pdpAdd" type="button">Add to cart</button><button class="gn-add now" id="pdpNow" type="button">Buy now</button>' +
+        '<div class="note">Free shipping on orders over $50. No payment is taken online; we confirm your order by email before anything ships.</div></div></div>' +
+      (more.length ? '<section class="gn-sec"><h2>More ' + h(it.c.toLowerCase()) + ' <a href="' + href(with_(blank(), { g: it.g, c: it.c })) + '">See all &rsaquo;</a></h2><div class="gn-row">' + more.map(card).join("") + "</div></section>" : "");
+    $("#pdpAdd").onclick = function () { addToCart(id, $("#pdpQty").value); };
+    $("#pdpNow").onclick = function () { addToCart(id, $("#pdpQty").value); openCart(); };
+    bindCards(mainEl);
+    window.scrollTo(0, 0);
+  }
+
+  function route() {
+    closeMega(); closeSide(); $("#gnAc").classList.remove("on");
+    var s = parse();
+    if (s.view === "pdp") renderPdp(s.id);
+    else if (s.view === "browse") { renderBrowse(s); window.scrollTo(0, 0); }
+    else renderHome();
+  }
+
+  /* =========================================================
+     9. Header: departments bar, mega menu, search + autocomplete
+     ========================================================= */
+  $("#logoArt").innerHTML = logoSVG();
+  $("#pqLogo").innerHTML = logoSVG();
+  $("#gnScope").innerHTML += DEPTS.map(function (D) { return '<option value="' + h(D.g) + '">' + h(D.g) + "</option>"; }).join("");
+  $("#gnBarIn").innerHTML += DEPTS.slice(0, 9).map(function (D) { return '<a href="' + href(with_(blank(), { g: D.g })) + '">' + h(D.g) + "</a>"; }).join("");
+
+  function megaRight(g) {
+    var D = GROUP_OF[g];
+    $("#gnMegaR").innerHTML = '<a class="shopall" href="' + href(with_(blank(), { g: g })) + '">Shop all ' + h(g) + " (" + num(GROUP_COUNT[g]) + ") &rsaquo;</a>" +
+      '<div class="cats">' + D.cats.map(function (C) {
+        return '<a href="' + href(with_(blank(), { g: g, c: C.c })) + '"><img src="' + pandaArt(CAT_ART[g + "|" + C.c]) + '" alt=""><span>' + h(C.c) + ' <small style="color:var(--gg)">(' + CAT_COUNT[g + "|" + C.c] + ")</small></span></a>";
+      }).join("") + "</div>";
+    $$("#gnMegaL a").forEach(function (a) { a.classList.toggle("on", a.dataset.g === g); });
+  }
+  $("#gnMegaL").innerHTML = DEPTS.map(function (D) { return '<a data-g="' + h(D.g) + '" href="' + href(with_(blank(), { g: D.g })) + '"><span>' + h(D.g) + "</span><span>&rsaquo;</span></a>"; }).join("");
+  $$("#gnMegaL a").forEach(function (a) { a.onmouseenter = function () { megaRight(a.dataset.g); }; });
+  function openMega() { megaRight(DEPTS[0].g); $("#gnMega").classList.add("on"); }
+  function closeMega() { $("#gnMega").classList.remove("on"); }
+  $("#gnAll").onclick = function (e) { e.stopPropagation(); $("#gnMega").classList.contains("on") ? closeMega() : openMega(); };
+  $("#gnHam").onclick = function (e) { e.stopPropagation(); openMega(); window.scrollTo(0, 0); };
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest("#gnMega") && !e.target.closest("#gnAll")) closeMega();
+    if (!e.target.closest("#gnSearch")) $("#gnAc").classList.remove("on");
+  });
+
+  function openSide() { var sd = $("#gnSide"); if (sd) { sd.classList.add("on"); $("#gnBg").classList.add("on"); } }
+  function closeSide() { var sd = $("#gnSide"); if (sd) sd.classList.remove("on"); $("#gnBg").classList.remove("on"); }
+  $("#gnBg").onclick = closeSide;
+
+  $("#gnSearch").onsubmit = function (e) {
+    e.preventDefault();
+    var q = $("#gnQ").value.trim(), g = $("#gnScope").value;
+    $("#gnAc").classList.remove("on");
+    if (/^\d{5}$/.test(q) && BY_ID[q]) { location.hash = "#/p/" + q; return; }
+    location.hash = href(with_(blank(), { q: q, g: g }));
+  };
+  var acIdx = -1;
+  $("#gnQ").addEventListener("input", function () {
+    var q = this.value.trim(), ac = $("#gnAc"); acIdx = -1;
+    if (q.length < 2) { ac.classList.remove("on"); return; }
+    var scope = $("#gnScope").value, pool = scope ? ITEMS.filter(function (i) { return i.g === scope; }) : ITEMS;
+    var hits = searchItems(pool, q), tk = tokens(q);
+    var cats = Object.keys(CAT_COUNT).filter(function (k) { var n = norm(k); return tk.length && tk.every(function (t) { return n.indexOf(t) !== -1; }); }).slice(0, 4);
+    if (!hits.length && !cats.length) { ac.innerHTML = '<h6>No matches</h6><a data-q="' + h(q) + '">Search all for "' + h(q) + '"</a>'; ac.classList.add("on"); return; }
+    ac.innerHTML = (cats.length ? "<h6>Categories</h6>" + cats.map(function (k) { var gc = k.split("|"); return '<a href="' + href(with_(blank(), { g: gc[0], c: gc[1] })) + '">' + h(gc[1]) + " <small>in " + h(gc[0]) + "</small></a>"; }).join("") : "") +
+      (hits.length ? "<h6>Products</h6>" + hits.slice(0, 6).map(function (it) { return '<a href="#/p/' + it.id + '"><img src="' + pandaArt(it.art) + '" alt=""><span>' + h(it.title) + "<br><small>" + money(it.price) + " &middot; " + h(it.brand) + "</small></span></a>"; }).join("") +
+        '<a data-q="' + h(q) + '" style="color:var(--gb);font-weight:600">See all ' + hits.length + ' results for "' + h(q) + '" &rsaquo;</a>' : "");
+    ac.classList.add("on");
+    $$("a[data-q]", ac).forEach(function (a) { a.onclick = function () { $("#gnSearch").requestSubmit ? $("#gnSearch").requestSubmit() : $("#gnSearch").onsubmit(new Event("submit")); }; });
+  });
+  $("#gnQ").addEventListener("keydown", function (e) {
+    var links = $$("#gnAc a"); if (!links.length || !$("#gnAc").classList.contains("on")) return;
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault(); acIdx = (acIdx + (e.key === "ArrowDown" ? 1 : -1) + links.length) % links.length;
+      links.forEach(function (l, i) { l.classList.toggle("hl", i === acIdx); });
+    } else if (e.key === "Enter" && acIdx >= 0) { e.preventDefault(); links[acIdx].click(); }
+    else if (e.key === "Escape") $("#gnAc").classList.remove("on");
+  });
+
+  /* =========================================================
+     10. Cart drawer, order request, email, print
+     ========================================================= */
+  var FIELDS = ["custName", "custEmail", "custPhone", "custAddr", "custNote"];
+  var saved = store("ppCustomer") || {};
+  FIELDS.forEach(function (f) { var el = $("#" + f); el.value = saved[f] || ""; el.addEventListener("input", function () { saved[f] = el.value; store("ppCustomer", saved); el.classList.remove("bad"); }); });
+
+  function renderCart() {
+    updateBadge();
+    $("#quoteTotal").textContent = money(cartTotal());
+    var linesEl = $("#quoteLines");
+    $("#quoteEmptyMsg").style.display = CART.length ? "none" : "block";
+    $("#ordForm").style.display = CART.length ? "block" : "none";
+    linesEl.innerHTML = CART.map(function (l) {
+      var it = BY_ID[l.id];
+      return '<div class="quote-line" data-id="' + l.id + '">' + (it ? '<img class="qline-thumb" src="' + pandaArt(it.art) + '" alt="">' : '<div class="qline-thumb"></div>') +
+        '<div class="qline-info"><div class="qline-title">' + h(l.title) + '</div><div class="qline-meta">' + h(l.brand) + " &middot; SKU " + h(l.sku) + " &middot; " + money(l.price) + "</div></div>" +
+        '<input type="number" class="qline-qty" min="1" step="1" value="' + l.qty + '" aria-label="Quantity"><div class="qline-total">' + money(l.price * l.qty) + "</div>" +
+        '<button class="qline-remove" type="button" title="Remove">&times;</button></div>';
+    }).join("");
+    $$(".quote-line", linesEl).forEach(function (row) {
+      var id = row.dataset.id;
+      $(".qline-qty", row).onchange = function () { var l = CART.find(function (x) { return x.id === id; }); if (l) { l.qty = Math.max(1, parseInt(this.value, 10) || 1); saveCart(); renderCart(); } };
+      $(".qline-remove", row).onclick = function () { CART = CART.filter(function (x) { return x.id !== id; }); saveCart(); renderCart(); };
+    });
+  }
+  function openCart() { resetDone(); renderCart(); $("#quoteOverlay").classList.add("open"); }
+  function closeCart() { $("#quoteOverlay").classList.remove("open"); }
+  $("#gnCart").onclick = openCart;
+  $("#closeQuote").onclick = closeCart;
+  $("#quoteOverlay").onclick = function (e) { if (e.target.id === "quoteOverlay") closeCart(); };
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeCart(); closeMega(); closeSide(); } });
+  $("#clearQuoteBtn").onclick = function () {
+    if (CART.length && !confirm("Remove all pandas from your cart?")) return;
+    CART = []; saveCart(); renderCart();
+  };
+
+  function validate() {
+    var err = $("#ordErr"), bad = [];
+    if (!CART.length) { alert("Add at least one panda to your cart first."); return false; }
+    ["custName", "custEmail", "custAddr"].forEach(function (f) { var el = $("#" + f); if (!el.value.trim()) { el.classList.add("bad"); bad.push(el); } });
+    var em = $("#custEmail");
+    if (em.value.trim() && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value.trim())) { em.classList.add("bad"); bad.push(em); }
+    if (bad.length) { err.textContent = "Please fill in the highlighted fields."; err.style.display = "block"; bad[0].focus(); return false; }
+    err.style.display = "none"; return true;
+  }
+
+  var bodyHTML = null;
+  function resetDone() { if (bodyHTML !== null) { $("#quoteBody").innerHTML = bodyHTML; bodyHTML = null; $("#quoteFoot").style.display = ""; rebindFields(); } }
+  function rebindFields() { FIELDS.forEach(function (f) { var el = $("#" + f); el.value = saved[f] || ""; el.addEventListener("input", function () { saved[f] = el.value; store("ppCustomer", saved); el.classList.remove("bad"); }); }); }
+
+  $("#placeOrderBtn").onclick = function () {
+    if (!validate()) return;
+    var ref = "PP-" + Date.now().toString(36).toUpperCase().slice(-6);
+    var orders = store("ppOrders") || [];
+    orders.push({ ref: ref, at: new Date().toISOString(), items: CART, total: cartTotal(), customer: { name: saved.custName, email: saved.custEmail } });
+    store("ppOrders", orders);
+    var first = (saved.custName || "").split(" ")[0];
+    bodyHTML = $("#quoteBody").innerHTML;
+    $("#quoteBody").innerHTML = '<div class="ord-done"><img src="' + pandaArt({ pal: "classic", acc: "heart", form: "sit", ac: 0 }) + '" alt="" style="width:130px;height:130px"><h3>Thank you' + (first ? ", " + h(first) : "") + '!</h3>' +
+      "<p>Your order request is in. Your reference number is</p><div class=\"ref\">" + ref + "</div>" +
+      "<p>We'll email <b>" + h(saved.custEmail) + "</b> within one business day to confirm and arrange payment. Nothing has been charged.</p>" +
+      '<p style="margin-top:18px"><button class="btn btn-primary" id="doneBtn" type="button">Keep shopping</button></p></div>';
+    $("#quoteFoot").style.display = "none";
+    CART = []; saveCart();
+    $("#doneBtn").onclick = function () { closeCart(); resetDone(); renderCart(); };
+  };
+
+  $("#emailQuoteBtn").onclick = function () {
+    if (!CART.length) { alert("Add at least one panda to your cart first."); return; }
+    var lines = CART.map(function (l) { return l.title + " (" + l.brand + ") — SKU " + l.sku + " — " + l.qty + " x " + money(l.price) + " = " + money(l.price * l.qty); }).join("\n");
+    var body = ["Hi Panda Plush Co.,", "", "I'd like to order:", "", lines, "", "Total: " + money(cartTotal()), "",
+      "Name: " + (saved.custName || ""), "Phone: " + (saved.custPhone || ""), "Deliver to: " + (saved.custAddr || ""), saved.custNote ? "Gift note: " + saved.custNote : ""].join("\n");
+    location.href = "mailto:orders@example.com?subject=" + encodeURIComponent("Panda order request" + (saved.custName ? " from " + saved.custName : "")) + "&body=" + encodeURIComponent(body);
+  };
+
+  $("#printQuoteBtn").onclick = function () {
+    if (!CART.length) { alert("Add at least one panda to your cart before printing."); return; }
+    $("#pqDate").textContent = new Date().toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+    $("#pqCustomer").textContent = saved.custName ? saved.custName + (saved.custEmail ? " (" + saved.custEmail + ")" : "") : (saved.custEmail || "—");
+    $("#pqAddr").textContent = saved.custAddr || "—";
+    $("#pqNoteWrap").style.display = saved.custNote ? "" : "none";
+    $("#pqNote").textContent = saved.custNote || "";
+    $("#pqRows").innerHTML = CART.map(function (l) {
+      var it = BY_ID[l.id];
+      return '<tr><td class="pq-photo-col">' + (it ? '<img class="pq-thumb" src="' + pandaArt(it.art) + '" alt="">' : "") + "</td><td>" + h(l.title) + '<br><span style="color:#6d6e71">' + h(l.brand) + "</span></td><td>" + h(l.sku) +
+        '</td><td class="num">' + l.qty + '</td><td class="num">' + money(l.price) + '</td><td class="num">' + money(l.price * l.qty) + "</td></tr>";
+    }).join("");
+    $("#pqGrandTotal").textContent = money(cartTotal());
+    window.print();
+  };
+
+  /* =========================================================
+     11. Boot
+     ========================================================= */
+  window.addEventListener("hashchange", route);
+  renderCart();
+  route();
+})();
+</script>
+</body>
+</html>
